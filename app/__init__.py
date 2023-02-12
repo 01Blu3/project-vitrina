@@ -6,12 +6,9 @@ import os
 
 load_dotenv()
 app = Flask(__name__)
-app.url_map.host_matching = True
 
-if __name__== "__main__":
+if __name__ == "__main__":
     app.run()
-
-
 
 """ Route names post-fix """
 # -aboutme
