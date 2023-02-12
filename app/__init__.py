@@ -20,7 +20,7 @@ if __name__== "__main__":
 # -hobbies
 # -places
 
-@app.route('/', host="mlh-xavier.ducksdns.org:5000")
+@app.route('/')
 def index():
     return render_template('work.html', title="Xavier's Profile", name="Xavier",
                            work_length="Jan 30/2023 - April 30/2023",
