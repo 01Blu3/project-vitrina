@@ -6,10 +6,9 @@ import os
 
 load_dotenv()
 app = Flask(__name__)
+app.url_map.host_matching = True
 
 if __name__== "__main__":
-    website_url="xavier-mlh:5000"
-    app.config["SERVER_NAME"] = website_url
     app.run()
 
 
@@ -21,7 +20,7 @@ if __name__== "__main__":
 # -hobbies
 # -places
 
-@app.route('/')
+@app.route('/', host="mlh-xavier.ducksdns.org")
 def index():
     return render_template('work.html', title="Xavier's Profile", name="Xavier",
                            work_length="Jan 30/2023 - April 30/2023",
